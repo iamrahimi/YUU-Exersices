@@ -9,16 +9,29 @@ public class SandwichShop {
         int customarAge;
         double customarTotalPrice = 0;
         double discountRate;
+        boolean loaded = false;
         Scanner input = new Scanner(System.in);
         System.out.println("Hello and welcome, to my sandwich shop!");
         System.out.println("Please select your sandwich from option below: \n" +
                             "a. 1: Regular: base price $5.45\n" +
                             "b. 2: Large: base price $8.95 \n");
         sandwichSize = input.nextLine();
-        if(sandwichSize.equals("a") || sandwichSize.equals("regular") ){
-            customarTotalPrice = 5.45;
-        } else if (sandwichSize.equals("b") || sandwichSize.equals("larg")) {
+
+        System.out.println("Do you want the sandwich loaded?");
+        loaded = input.nextBoolean();
+
+        if(sandwichSize.equals("a") || sandwichSize.equals("regular") || sandwichSize.equals("1") ){
             customarTotalPrice = 8.95;
+
+            if(loaded == true){
+                customarTotalPrice = 5.45 + 1.00;
+            }
+
+        } else if (sandwichSize.equals("b") || sandwichSize.equals("larg") || sandwichSize.equals("2")) {
+            customarTotalPrice = 8.95;
+            if(loaded == true){
+                customarTotalPrice = 8.95 + 1.75;
+            }
         } else {
             System.out.println("Invalid sandwich size!");
         }
