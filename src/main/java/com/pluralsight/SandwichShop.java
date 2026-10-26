@@ -21,7 +21,7 @@ public class SandwichShop {
         loaded = input.nextBoolean();
 
         if(sandwichSize.equals("a") || sandwichSize.equals("regular") || sandwichSize.equals("1") ){
-            customarTotalPrice = 8.95;
+            customarTotalPrice = 5.45;
 
             if(loaded == true){
                 customarTotalPrice = 5.45 + 1.00;
@@ -44,16 +44,13 @@ public class SandwichShop {
                 "Please enter your age?");
         customarAge = input.nextInt();
 
-        if(customarAge > 17 || customarAge < 30){
+        if(customarAge < 17){
             customarTotalPrice *= 0.90;
         } else if (customarAge > 65) {
             customarTotalPrice *= 0.80;
         }
 
         System.out.println("Your total is: " + customarTotalPrice);
-
-
-
 
 
     }
