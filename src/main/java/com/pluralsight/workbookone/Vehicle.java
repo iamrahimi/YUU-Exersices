@@ -2,11 +2,6 @@ package com.pluralsight.workbookone;
 
 public class Vehicle {
 
-//    vehicleId - a long (ex: 101121)
-//    makeModel - a string (ex: Ford Explorer)
-//    color - a string (ex: Red)
-//    odometerReading - an int (ex: 32775)
-//    price - a double (ex: 12250.00) (no Lamborghinis here!)
     private long vehicleId;
     private String makeModel;
     private String color;

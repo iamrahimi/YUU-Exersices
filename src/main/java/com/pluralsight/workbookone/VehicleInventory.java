@@ -45,7 +45,7 @@ public class VehicleInventory {
                 findVehiclesByColor();
                 break;
             case 5:
-                addVehicule();
+                addVehicle();
                 break;
             case 6:
                 System.out.println("Thank you for using the vehicle inventory application");
@@ -57,9 +57,9 @@ public class VehicleInventory {
         }
     }
 
-    public static void addVehicule(){
-        input.nextLine();
-        System.out.println("Please enter your vehicul ID: ");
+    public static void addVehicle(){
+
+        System.out.println("Please enter your vehicle ID: ");
         long vehicleId = input.nextLong(); input.nextLine();
         System.out.println("Please enter your make/Model: ");
         String makeModel = input.nextLine();
@@ -84,8 +84,8 @@ public class VehicleInventory {
             if(vehicle[i] != null) {
                 viewVehicle(vehicle[i]);
             }
-
         }
+
         tableFooter();
         start();
     }
@@ -93,7 +93,6 @@ public class VehicleInventory {
     public static void findVehiclesByMakeModel() {
         String makeModel;
         System.out.println("Please enter the make model: ");
-//        input.nextLine();
         makeModel = input.nextLine().trim();
         tableHeader();
         for(int i = 0; i<vehicle.length; i++) {
