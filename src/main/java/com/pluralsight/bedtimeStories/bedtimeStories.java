@@ -13,9 +13,9 @@ public class bedtimeStories {
         System.out.println("Welcome to my bedtime stories application!");
 
         books = new String[] {
-                "goldilocks.txt",
-                "hansel_and_gretel.txt",
-                "mary_had_a_little_lamb.txt"
+                "uploads/goldilocks.txt",
+                "uploads/hansel_and_gretel.txt",
+                "uploads/mary_had_a_little_lamb.txt"
         };
        askUserChoice(books);
 
