@@ -76,10 +76,10 @@ public class SearchInventory {
     public static void displayProducts() {
 
         ArrayList<Products> inventoryData = getInventory();
-        Collections.sort(inventoryData, (product1, product2) ->
+        inventoryData.sort((product1, product2) ->
                 product1.getName().compareTo(product2.getName()));
 
-//        addProduct(); // Adding 20 product to the array
+//        addProduct(); // Adding 5 product to the array
 
         for(int i = 0; i < inventoryData.size(); i++) {
             Products p = inventoryData.get(i);
@@ -116,21 +116,6 @@ public class SearchInventory {
         inventory.add(new Products(3, "Milk", 3.50f));
         inventory.add(new Products(4, "Bread", 2.99f));
         inventory.add(new Products(5, "Eggs", 4.25f));
-        inventory.add(new Products(6, "Cheese", 5.50f));
-        inventory.add(new Products(7, "Rice", 8.99f));
-        inventory.add(new Products(8, "Pasta", 2.49f));
-        inventory.add(new Products(9, "Coffee", 9.99f));
-        inventory.add(new Products(10, "Tea", 4.99f));
-        inventory.add(new Products(11, "Orange Juice", 3.99f));
-        inventory.add(new Products(12, "Cereal", 5.25f));
-        inventory.add(new Products(13, "Chicken", 12.50f));
-        inventory.add(new Products(14, "Ground Beef", 8.75f));
-        inventory.add(new Products(15, "Potatoes", 4.50f));
-        inventory.add(new Products(16, "Tomatoes", 3.25f));
-        inventory.add(new Products(17, "Onions", 2.00f));
-        inventory.add(new Products(18, "Cooking Oil", 6.99f));
-        inventory.add(new Products(19, "Yogurt", 1.50f));
-        inventory.add(new Products(20, "Chocolate", 2.75f));
         System.out.println("Added products to inventory");
 
     }
